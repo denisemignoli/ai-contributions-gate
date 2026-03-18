@@ -1,9 +1,0 @@
-name: Issue
-description: Criação de issue (após discussion)
-body:
-  - type: input
-    attributes:
-      label: Discussion Link
-      description: Link obrigatório da discussion
-    validations:
-      required: true

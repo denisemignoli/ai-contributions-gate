@@ -1,0 +1,16 @@
+name: Pre-Discussed Topic
+description: Apenas para tópicos já discutidos
+title: "[ISSUE] "
+body:
+  - type: input
+    attributes:
+      label: Discussion Link
+      description: Link obrigatório da discussion
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Contexto
+    validations:
+      required: true
