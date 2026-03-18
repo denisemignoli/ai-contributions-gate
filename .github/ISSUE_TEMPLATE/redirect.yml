@@ -1,18 +1,5 @@
-name: Features, Bugs, Questions
-description: Use Discussions primeiro
-title: "[REDIRECT] "
-body:
-  - type: markdown
-    attributes:
-      value: |
-        🚫 Não abra issue diretamente.
-
-        👉 Vá para Discussions:
-        https://github.com/denisemignoli/ai-contributions-gate/discussions/new/choose
-
-  - type: input
-    attributes:
-      label: Confirmação
-      description: Digite qualquer coisa para continuar
-    validations:
-      required: true
+blank_issues_enabled: false
+contact_links:
+  - name: Features, Bug Reports, Questions
+    url: https://github.com/denisemignoli/ai-contributions-gate/discussions/new/choose
+    about: Our preferred starting point if you have any questions or suggestions about configuration, features or behavior.
