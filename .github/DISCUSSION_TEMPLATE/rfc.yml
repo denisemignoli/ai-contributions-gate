@@ -1,0 +1,22 @@
+title: "[RFC] "
+labels: ["rfc"]
+body:
+  - type: textarea
+    attributes:
+      label: Contexto
+      description: Qual problema você quer resolver?
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Proposta
+      description: Como você pretende resolver?
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Alternativas consideradas
+    validations:
+      required: false
