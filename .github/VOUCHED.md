@@ -2,3 +2,4 @@
 
 
 - @denisemignoli
+- @BeatrizGiacon
