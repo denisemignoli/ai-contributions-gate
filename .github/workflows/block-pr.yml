@@ -12,7 +12,9 @@ jobs:
 
       - name: Check vouched user
         run: |
-          if ! grep -q "${{ github.actor }}" .github/VOUCHED.md; then
+          if ! grep -q "$ACTOR" .github/VOUCHED.md; then
             echo "User not vouched"
             exit 1
           fi
+        env:
+          ACTOR: ${{ github.actor }}

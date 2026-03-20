@@ -38,28 +38,36 @@ jobs:
       - name: Get author (issue or discussion)
         id: author
         run: |
-          if [ "${{ github.event_name }}" = "discussion_comment" ]; then
-            AUTHOR="${{ github.event.discussion.user.login }}"
+          if [ "$EVENT_NAME" = "discussion_comment" ]; then
+            AUTHOR="$DISCUSSION_AUTHOR"
           else
-            AUTHOR="${{ github.event.issue.user.login }}"
+            AUTHOR="$ISSUE_AUTHOR"
           fi
 
           echo "author=$AUTHOR"
           echo "author=$AUTHOR" >> $GITHUB_OUTPUT
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          DISCUSSION_AUTHOR: ${{ github.event.discussion.user.login }}
+          ISSUE_AUTHOR: ${{ github.event.issue.user.login }}
 
       - name: Add to VOUCHED.md
         run: |
-          USER="@${{ steps.author.outputs.author }}"
+          USER="@$AUTHOR"
           FILE=".github/VOUCHED.md"
 
           if ! grep -q "$USER" $FILE; then
             echo "- $USER" >> $FILE
           fi
+        env:
+          AUTHOR: ${{ steps.author.outputs.author }}
 
       - name: Commit changes
         run: |
           git config user.name "vouch-bot"
           git config user.email "actions@github.com"
           git add .github/VOUCHED.md
-          git commit -m "Add vouched user: ${{ steps.author.outputs.author }}" || echo "No changes"
+          git commit -m "Add vouched user: $AUTHOR" || echo "No changes"
           git push
+        env:
+          AUTHOR: ${{ steps.author.outputs.author }}

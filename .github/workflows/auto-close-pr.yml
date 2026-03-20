@@ -19,11 +19,13 @@ jobs:
       - name: Check if user is vouched
         id: check
         run: |
-          if grep -q "@${{ github.actor }}" .github/VOUCHED.md; then
+          if grep -q "@$ACTOR" .github/VOUCHED.md; then
             echo "vouched=true" >> $GITHUB_OUTPUT
           else
             echo "vouched=false" >> $GITHUB_OUTPUT
           fi
+        env:
+          ACTOR: ${{ github.actor }}
 
       - name: Comment and close PR
         if: steps.check.outputs.vouched == 'false'
