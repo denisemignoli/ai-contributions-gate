@@ -11,7 +11,7 @@ body:
 
   - type: textarea
     attributes:
-      label: Contexto
+      label: Context
       description: Provide a clear description of the issue or task
     validations:
       required: true
