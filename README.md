@@ -6,3 +6,5 @@
 4. Só então abra PR
 
 PRs sem vouch serão bloqueados automaticamente
+
+teste - beatriz
