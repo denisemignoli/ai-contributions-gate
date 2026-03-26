@@ -4,3 +4,4 @@
 - @denisemignoli
 - @BeatrizGiacon
 - @visantosms
+- @fedeoliv
