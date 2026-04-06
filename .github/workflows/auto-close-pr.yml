@@ -24,7 +24,7 @@ jobs:
           ASSOCIATION: ${{ github.event.pull_request.author_association }}
 
       - name: Checkout repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         if: steps.free-pass.outputs.skip != 'true'
 
       - name: Check if user is vouched

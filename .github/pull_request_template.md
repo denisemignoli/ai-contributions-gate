@@ -1,12 +1,12 @@
 ## Discussion Link
 Link:
 
-## Contexto
-Explique o problema
+## Context
+Describe the problem this PR addresses
 
-## Solução
-Explique o que foi feito
+## Solution
+Explain what was done and why
 
 ## Checklist
-- [ ] Existe discussion vinculada
-- [ ] A solução foi validada
+- [ ] Linked discussion exists
+- [ ] Solution has been validated
