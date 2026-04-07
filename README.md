@@ -1,4 +1,5 @@
 ## Como contribuir
+teste
 
 1. Abra uma Discussion
 2. Para primeira contribuição → use "Vouch Request"
